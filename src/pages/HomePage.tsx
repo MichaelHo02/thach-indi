@@ -70,7 +70,7 @@ export default function HomePage() {
                     transition={{ duration: 0.3 }}
                   >
                     <img 
-                      src="/thach-indi/ios-icon.png" 
+                      src="/thach-indi/apps/time-jar/icon.png" 
                       alt="Time Jar Logo" 
                       className="w-24 h-24 mx-auto bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl object-cover shadow-lg group-hover:shadow-2xl transition-all duration-500" 
                     />
@@ -117,7 +117,7 @@ export default function HomePage() {
                     transition={{ duration: 0.3 }}
                   >
                     <img 
-                      src="/thach-indi/ios-icon-dark.png" 
+                      src="/thach-indi/apps/questions-game/icon.png" 
                       alt="Questions Game Logo" 
                       className="w-24 h-24 mx-auto bg-gradient-to-br from-yellow-50 to-orange-100 rounded-3xl object-cover shadow-lg group-hover:shadow-2xl transition-all duration-500" 
                     />
