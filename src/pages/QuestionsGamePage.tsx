@@ -16,8 +16,8 @@ export default function QuestionsGamePage() {
       <Navbar currentPage="questions-game" />
 
       <main className="flex-1">
-        <div className="container mx-auto px-4 py-12">
-          <section className="text-center mb-16">
+        <div className="container mx-auto px-4 py-8 md:py-12">
+          <section className="text-center mb-12 md:mb-16">
             <motion.div
               className="relative inline-block mb-8"
               initial={{ opacity: 0, scale: 0.8 }}
@@ -41,15 +41,17 @@ export default function QuestionsGamePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              <Badge variant="secondary" className="mb-4 shadow-lg border-primary/20">
-                <Gamepad2 className="w-3 h-3 mr-1" />
-                Entertainment App
-              </Badge>
-              <Badge className="ml-2 bg-orange-500 text-xs">
-                Coming Soon
-              </Badge>
+              <div className="flex items-center justify-center gap-2 mb-4 flex-wrap">
+                <Badge variant="secondary" className="shadow-lg border-primary/20">
+                  <Gamepad2 className="w-3 h-3 mr-1" />
+                  Entertainment App
+                </Badge>
+                <Badge className="bg-orange-500 text-xs">
+                  Coming Soon
+                </Badge>
+              </div>
               <motion.h1
-                className="text-5xl font-bold mb-4"
+                className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.6, duration: 0.8 }}
@@ -62,7 +64,7 @@ export default function QuestionsGamePage() {
                 />
               </motion.h1>
               <motion.p
-                className="text-2xl font-medium text-muted-foreground mb-2"
+                className="text-xl sm:text-2xl font-medium text-muted-foreground mb-2"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8, duration: 0.6 }}
@@ -72,7 +74,7 @@ export default function QuestionsGamePage() {
             </motion.div>
 
             <motion.p
-              className="text-xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed"
+              className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed px-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.0, duration: 0.6 }}
@@ -80,12 +82,12 @@ export default function QuestionsGamePage() {
               Spark meaningful conversations and deepen your connections with our digital conversation card library. Whether with a partner, family, or friends, each prompt is designed to inspire curiosity, laughter, and authentic connection.
             </motion.p>
 
-            <div className="flex items-center justify-center gap-4 mb-8">
-              <Badge variant="outline" className="text-sm">
+            <div className="flex items-center justify-center gap-2 md:gap-4 mb-8 flex-wrap px-4">
+              <Badge variant="outline" className="text-xs sm:text-sm">
                 <Brain className="w-3 h-3 mr-1" />
                 Conversation Cards
               </Badge>
-              <Badge variant="outline" className="text-sm">
+              <Badge variant="outline" className="text-xs sm:text-sm">
                 <Target className="w-3 h-3 mr-1" />
                 Meaningful Connections
               </Badge>
@@ -108,7 +110,7 @@ export default function QuestionsGamePage() {
               <p className="text-muted-foreground text-lg">Get a preview of the conversation starter experience</p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
               <Magnetic strength={0.3} range={120}>
                 <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2">
                   <CardContent className="p-4">

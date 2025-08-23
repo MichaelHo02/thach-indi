@@ -16,8 +16,8 @@ export default function TimeJarPage() {
       <Navbar currentPage="time-jar" />
       
       <main className="flex-1">
-        <div className="container mx-auto px-4 py-12">
-          <section className="text-center mb-16">
+        <div className="container mx-auto px-4 py-8 md:py-12">
+          <section className="text-center mb-12 md:mb-16">
             <motion.div 
               className="relative inline-block mb-8"
               initial={{ opacity: 0, scale: 0.8 }}
@@ -41,18 +41,20 @@ export default function TimeJarPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              <Badge variant="secondary" className="mb-4 shadow-lg border-primary/20">
-                <Clock className="w-3 h-3 mr-1" />
-                Productivity App
-              </Badge>
-              <Badge className="ml-2 bg-green-500 text-xs">
-                <div className="flex items-center gap-1">
-                  <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
-                  Live
-                </div>
-              </Badge>
+              <div className="flex items-center justify-center gap-2 mb-4 flex-wrap">
+                <Badge variant="secondary" className="shadow-lg border-primary/20">
+                  <Clock className="w-3 h-3 mr-1" />
+                  Productivity App
+                </Badge>
+                <Badge className="bg-green-500 text-xs">
+                  <div className="flex items-center gap-1">
+                    <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+                    Live
+                  </div>
+                </Badge>
+              </div>
               <motion.h1 
-                className="text-5xl font-bold mb-4"
+                className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.6, duration: 0.8 }}
@@ -65,7 +67,7 @@ export default function TimeJarPage() {
                 />
               </motion.h1>
               <motion.p 
-                className="text-2xl font-medium text-muted-foreground mb-2"
+                className="text-xl sm:text-2xl font-medium text-muted-foreground mb-2"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8, duration: 0.6 }}
@@ -74,21 +76,21 @@ export default function TimeJarPage() {
               </motion.p>
             </motion.div>
             
-            <p className="text-xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed px-4">
               Track your progress, log deep work sessions, and unlock your full potential—because your time is priceless. 
               Perfect for professionals, students, and anyone who values productive time management.
             </p>
             
-            <div className="flex items-center justify-center gap-4 mb-8">
-              <Badge variant="outline" className="text-sm">
+            <div className="flex items-center justify-center gap-2 md:gap-4 mb-8 flex-wrap px-4">
+              <Badge variant="outline" className="text-xs sm:text-sm">
                 <Focus className="w-3 h-3 mr-1" />
                 Deep Work Sessions
               </Badge>
-              <Badge variant="outline" className="text-sm">
+              <Badge variant="outline" className="text-xs sm:text-sm">
                 <BarChart3 className="w-3 h-3 mr-1" />
                 Progress Analytics  
               </Badge>
-              <Badge variant="outline" className="text-sm">
+              <Badge variant="outline" className="text-xs sm:text-sm">
                 <Shield className="w-3 h-3 mr-1" />
                 Privacy First
               </Badge>
@@ -118,7 +120,7 @@ export default function TimeJarPage() {
               <p className="text-muted-foreground text-lg">Experience the beautiful, intuitive interface</p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
               <Magnetic strength={0.3} range={120}>
                 <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2">
                   <CardContent className="p-4">

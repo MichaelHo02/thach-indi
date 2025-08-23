@@ -16,7 +16,7 @@ export default function HomePage() {
       <Navbar currentPage="home" />
 
       <main className="flex-1">
-        <div className="container mx-auto px-4 py-12">
+        <div className="container mx-auto px-4 py-8 md:py-12">
           <section className="text-center mb-16 relative">
             <motion.div
               className="flex items-center justify-center gap-2 mb-4"
@@ -30,7 +30,7 @@ export default function HomePage() {
               </Badge>
             </motion.div>
             <motion.h1
-              className="text-5xl font-bold mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -43,7 +43,7 @@ export default function HomePage() {
               />
             </motion.h1>
             <motion.p
-              className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+              className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -56,7 +56,7 @@ export default function HomePage() {
           <Separator className="my-12" />
 
           <motion.section
-            className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto"
+            className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -86,10 +86,10 @@ export default function HomePage() {
                     Master your time and maximize your focus with deep work session tracking.
                     Perfect for professionals and students who value productive time management.
                   </p>
-                  <div className="flex items-center justify-center gap-2 mb-6">
-                    <Badge variant="secondary">Time Tracking</Badge>
-                    <Badge variant="secondary">Focus Mode</Badge>
-                    <Badge variant="secondary">iOS App</Badge>
+                  <div className="flex items-center justify-center gap-2 mb-6 flex-wrap">
+                    <Badge variant="secondary" className="text-xs">Time Tracking</Badge>
+                    <Badge variant="secondary" className="text-xs">Focus Mode</Badge>
+                    <Badge variant="secondary" className="text-xs">iOS App</Badge>
                   </div>
                   <Button asChild className="group/button">
                     <Link to="/apps/time-jar" className="flex items-center gap-2">
@@ -126,10 +126,10 @@ export default function HomePage() {
                     Spark meaningful conversations with our digital conversation card library. 
                     Perfect for deepening connections with partners, family, and friends.
                   </p>
-                  <div className="flex items-center justify-center gap-2 mb-6">
-                    <Badge variant="secondary">Conversation Cards</Badge>
-                    <Badge variant="secondary">Meaningful Connections</Badge>
-                    <Badge variant="secondary">Coming Soon</Badge>
+                  <div className="flex items-center justify-center gap-2 mb-6 flex-wrap">
+                    <Badge variant="secondary" className="text-xs">Conversation Cards</Badge>
+                    <Badge variant="secondary" className="text-xs">Meaningful Connections</Badge>
+                    <Badge variant="secondary" className="text-xs">Coming Soon</Badge>
                   </div>
                   <Button asChild className="group/button">
                     <Link to="/apps/questions-game" className="flex items-center gap-2">
