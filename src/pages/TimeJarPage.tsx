@@ -26,7 +26,7 @@ export default function TimeJarPage() {
             >
               <Magnetic strength={0.4} range={100}>
                 <motion.img 
-                  src="/ios-icon.png" 
+                  src="/thach-indi/ios-icon.png" 
                   alt="Time Jar Logo" 
                   className="w-32 h-32 mx-auto bg-gradient-to-br from-blue-50 via-blue-100 to-purple-50 rounded-3xl object-cover shadow-2xl"
                   whileHover={{ scale: 1.1, rotate: 5 }}
@@ -129,7 +129,7 @@ export default function TimeJarPage() {
                 <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2">
                   <CardContent className="p-4">
                     <img 
-                      src="/Frame 6.png" 
+                      src="/thach-indi/Frame 6.png" 
                       alt="Time tracking interface" 
                       className="w-full border border-border rounded-2xl group-hover:scale-105 transition-transform duration-300"
                     />
@@ -140,7 +140,7 @@ export default function TimeJarPage() {
                 <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2">
                   <CardContent className="p-4">
                     <img 
-                      src="/Frame 5.png" 
+                      src="/thach-indi/Frame 5.png" 
                       alt="Session management" 
                       className="w-full border border-border rounded-2xl group-hover:scale-105 transition-transform duration-300"
                     />
@@ -151,7 +151,7 @@ export default function TimeJarPage() {
                 <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2">
                   <CardContent className="p-4">
                     <img 
-                      src="/Frame 7.png" 
+                      src="/thach-indi/Frame 7.png" 
                       alt="Analytics dashboard" 
                       className="w-full border border-border rounded-2xl group-hover:scale-105 transition-transform duration-300"
                     />
@@ -162,7 +162,7 @@ export default function TimeJarPage() {
                 <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2">
                   <CardContent className="p-4">
                     <img 
-                      src="/Frame 4.png" 
+                      src="/thach-indi/Frame 4.png" 
                       alt="Live activities" 
                       className="w-full border border-border rounded-2xl group-hover:scale-105 transition-transform duration-300"
                     />

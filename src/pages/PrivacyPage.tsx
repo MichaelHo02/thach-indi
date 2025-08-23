@@ -20,7 +20,7 @@ export default function PrivacyPage({ app }: PrivacyPageProps) {
           <section className="text-center mb-12">
             <div className="mx-auto mb-6 bg-blue-100 rounded-3xl w-32 h-32 flex items-center justify-center">
               <img 
-                src="/Author-Privacy.png" 
+                src="/thach-indi/Author-Privacy.png" 
                 alt="Privacy Logo" 
                 className="w-full h-full object-cover rounded-3xl"
               />
