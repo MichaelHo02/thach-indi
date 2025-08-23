@@ -5,7 +5,10 @@ import { Button } from '../components/ui/button'
 import { Card, CardContent } from '../components/ui/card'
 import { Badge } from '../components/ui/badge'
 import { Separator } from '../components/ui/separator'
+import { Magnetic } from '../components/ui/magnetic'
+import { ShimmeringText } from '../components/ui/shimmering-text'
 import { Download, Shield, Clock, BarChart3, Focus } from 'lucide-react'
+import { motion } from 'motion/react'
 
 export default function TimeJarPage() {
   return (
@@ -15,30 +18,67 @@ export default function TimeJarPage() {
       <main className="flex-1">
         <div className="container mx-auto px-4 py-12">
           <section className="text-center mb-16">
-            <div className="relative inline-block mb-8">
-              <img 
-                src="/ios-icon.png" 
-                alt="Time Jar Logo" 
-                className="w-32 h-32 mx-auto bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl object-cover shadow-lg"
-              />
-              <Badge className="absolute -top-2 -right-2 bg-green-500">
-                <div className="flex items-center gap-1">
-                  <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
-                  Live
-                </div>
-              </Badge>
-            </div>
+            <motion.div 
+              className="relative inline-block mb-8"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+            >
+              <Magnetic strength={0.4} range={100}>
+                <motion.img 
+                  src="/ios-icon.png" 
+                  alt="Time Jar Logo" 
+                  className="w-32 h-32 mx-auto bg-gradient-to-br from-blue-50 via-blue-100 to-purple-50 rounded-3xl object-cover shadow-2xl"
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </Magnetic>
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.3, duration: 0.4 }}
+              >
+                <Badge className="absolute -top-2 -right-2 bg-green-500 shadow-lg">
+                  <div className="flex items-center gap-1">
+                    <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+                    Live
+                  </div>
+                </Badge>
+              </motion.div>
+            </motion.div>
             
-            <div className="mb-6">
-              <Badge variant="secondary" className="mb-4">
+            <motion.div 
+              className="mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+            >
+              <Badge variant="secondary" className="mb-4 shadow-lg border-primary/20">
                 <Clock className="w-3 h-3 mr-1" />
                 Productivity App
               </Badge>
-              <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
-                Time Jar
-              </h1>
-              <p className="text-2xl font-medium text-muted-foreground mb-2">Master Your Time, Maximize Your Focus</p>
-            </div>
+              <motion.h1 
+                className="text-5xl font-bold mb-4"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.6, duration: 0.8 }}
+              >
+                <ShimmeringText 
+                  text="Time Jar"
+                  className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-400 bg-clip-text text-transparent"
+                  duration={2.5}
+                  wave={true}
+                />
+              </motion.h1>
+              <motion.p 
+                className="text-2xl font-medium text-muted-foreground mb-2"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+              >
+                Master Your Time, Maximize Your Focus
+              </motion.p>
+            </motion.div>
             
             <p className="text-xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
               Track your progress, log deep work sessions, and unlock your full potential—because your time is priceless. 
@@ -60,17 +100,19 @@ export default function TimeJarPage() {
               </Badge>
             </div>
             
-            <Button asChild size="lg" className="mb-4">
-              <a 
-                href="https://apps.apple.com/app/time-jar/id6739752821"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
-              >
-                <Download className="w-5 h-5" />
-                Download on App Store
-              </a>
-            </Button>
+            <Magnetic strength={0.2} range={80}>
+              <Button asChild size="lg" className="mb-4 shadow-lg hover:shadow-2xl transition-all duration-300">
+                <a 
+                  href="https://apps.apple.com/app/time-jar/id6739752821"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <Download className="w-5 h-5" />
+                  Download on App Store
+                </a>
+              </Button>
+            </Magnetic>
             <p className="text-sm text-muted-foreground">Free • iOS 14.0+</p>
           </section>
 
@@ -83,42 +125,50 @@ export default function TimeJarPage() {
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-              <Card className="group hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-4">
-                  <img 
-                    src="/Frame 6.png" 
-                    alt="Time tracking interface" 
-                    className="w-full border border-border rounded-2xl group-hover:scale-105 transition-transform duration-300"
-                  />
-                </CardContent>
-              </Card>
-              <Card className="group hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-4">
-                  <img 
-                    src="/Frame 5.png" 
-                    alt="Session management" 
-                    className="w-full border border-border rounded-2xl group-hover:scale-105 transition-transform duration-300"
-                  />
-                </CardContent>
-              </Card>
-              <Card className="group hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-4">
-                  <img 
-                    src="/Frame 7.png" 
-                    alt="Analytics dashboard" 
-                    className="w-full border border-border rounded-2xl group-hover:scale-105 transition-transform duration-300"
-                  />
-                </CardContent>
-              </Card>
-              <Card className="group hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-4">
-                  <img 
-                    src="/Frame 4.png" 
-                    alt="Live activities" 
-                    className="w-full border border-border rounded-2xl group-hover:scale-105 transition-transform duration-300"
-                  />
-                </CardContent>
-              </Card>
+              <Magnetic strength={0.3} range={120}>
+                <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2">
+                  <CardContent className="p-4">
+                    <img 
+                      src="/Frame 6.png" 
+                      alt="Time tracking interface" 
+                      className="w-full border border-border rounded-2xl group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </CardContent>
+                </Card>
+              </Magnetic>
+              <Magnetic strength={0.3} range={120}>
+                <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2">
+                  <CardContent className="p-4">
+                    <img 
+                      src="/Frame 5.png" 
+                      alt="Session management" 
+                      className="w-full border border-border rounded-2xl group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </CardContent>
+                </Card>
+              </Magnetic>
+              <Magnetic strength={0.3} range={120}>
+                <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2">
+                  <CardContent className="p-4">
+                    <img 
+                      src="/Frame 7.png" 
+                      alt="Analytics dashboard" 
+                      className="w-full border border-border rounded-2xl group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </CardContent>
+                </Card>
+              </Magnetic>
+              <Magnetic strength={0.3} range={120}>
+                <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2">
+                  <CardContent className="p-4">
+                    <img 
+                      src="/Frame 4.png" 
+                      alt="Live activities" 
+                      className="w-full border border-border rounded-2xl group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </CardContent>
+                </Card>
+              </Magnetic>
             </div>
           </section>
 
