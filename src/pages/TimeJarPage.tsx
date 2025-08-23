@@ -33,18 +33,6 @@ export default function TimeJarPage() {
                   transition={{ duration: 0.3 }}
                 />
               </Magnetic>
-              <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.3, duration: 0.4 }}
-              >
-                <Badge className="absolute -top-2 -right-2 bg-green-500 shadow-lg">
-                  <div className="flex items-center gap-1">
-                    <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
-                    Live
-                  </div>
-                </Badge>
-              </motion.div>
             </motion.div>
             
             <motion.div 
@@ -56,6 +44,12 @@ export default function TimeJarPage() {
               <Badge variant="secondary" className="mb-4 shadow-lg border-primary/20">
                 <Clock className="w-3 h-3 mr-1" />
                 Productivity App
+              </Badge>
+              <Badge className="ml-2 bg-green-500 text-xs">
+                <div className="flex items-center gap-1">
+                  <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+                  Live
+                </div>
               </Badge>
               <motion.h1 
                 className="text-5xl font-bold mb-4"
