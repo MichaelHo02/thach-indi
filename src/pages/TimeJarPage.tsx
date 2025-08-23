@@ -120,12 +120,12 @@ export default function TimeJarPage() {
               <p className="text-muted-foreground text-lg">Experience the beautiful, intuitive interface</p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-8">
               <Magnetic strength={0.3} range={120}>
                 <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2">
                   <CardContent className="p-4">
                     <img 
-                      src="/thach-indi/apps/time-jar/screenshots/session-tracking.png" 
+                      src="/thach-indi/apps/time-jar/screenshots/image1.png" 
                       alt="Time tracking interface" 
                       className="w-full border border-border rounded-2xl group-hover:scale-105 transition-transform duration-300"
                     />
@@ -136,7 +136,7 @@ export default function TimeJarPage() {
                 <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2">
                   <CardContent className="p-4">
                     <img 
-                      src="/thach-indi/apps/time-jar/screenshots/session-management.png" 
+                      src="/thach-indi/apps/time-jar/screenshots/image2.png" 
                       alt="Session management" 
                       className="w-full border border-border rounded-2xl group-hover:scale-105 transition-transform duration-300"
                     />
@@ -147,7 +147,7 @@ export default function TimeJarPage() {
                 <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2">
                   <CardContent className="p-4">
                     <img 
-                      src="/thach-indi/apps/time-jar/screenshots/analytics-dashboard.png" 
+                      src="/thach-indi/apps/time-jar/screenshots/image3.png" 
                       alt="Analytics dashboard" 
                       className="w-full border border-border rounded-2xl group-hover:scale-105 transition-transform duration-300"
                     />
@@ -158,8 +158,19 @@ export default function TimeJarPage() {
                 <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2">
                   <CardContent className="p-4">
                     <img 
-                      src="/thach-indi/apps/time-jar/screenshots/live-activities.png" 
+                      src="/thach-indi/apps/time-jar/screenshots/image4.png" 
                       alt="Live activities" 
+                      className="w-full border border-border rounded-2xl group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </CardContent>
+                </Card>
+              </Magnetic>
+              <Magnetic strength={0.3} range={120}>
+                <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-2">
+                  <CardContent className="p-4">
+                    <img 
+                      src="/thach-indi/apps/time-jar/screenshots/image5.png" 
+                      alt="App features" 
                       className="w-full border border-border rounded-2xl group-hover:scale-105 transition-transform duration-300"
                     />
                   </CardContent>
